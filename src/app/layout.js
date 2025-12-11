@@ -1,5 +1,10 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import SmoothScroll from "./smoothScroll";
+import FlyFazaiaNavbar from "./home_comps/navBar";
+import Footer from "./home_comps/footer";
+import { NavServer } from "./home_comps/navServerAction";
+import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,12 +22,19 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  console.log("root rendered");
+  
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      <body 
+        className={`${geistSans.variable} ${geistMono.variable} antialiased custom-grid-background`}
       >
+        <SmoothScroll/>
+       
+    <Suspense fallback={<p className="text-black text-6xl">LOADING</p>}><NavServer/></Suspense> 
+      
         {children}
+        <Footer/>
       </body>
     </html>
   );
