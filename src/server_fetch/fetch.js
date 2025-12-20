@@ -1,18 +1,19 @@
 
 
 export const fetch_fnx=async(type,opt)=>{
-    let url=null;
+   let url=process.env.NODE_ENV==='production'?process.env.URL:"http://localhost:4600/api";
+
 switch (type) {
     case "courses":
-        {url='http://localhost:4600/api/courses?type=full';
+        {url=`${url}/courses?type=full`;
         break;
 }
-case "syllabus":{url=`http://localhost:4600/api/syllabus?id=${opt}`;break;}
-case "course-list":{url='http://localhost:4600/api/courses?type=list';
+case "syllabus":{url=`${url}/syllabus?id=${opt}`;break;}
+case "course-list":{url=`${url}/courses?type=list`;
         break;}
-        case "services":{url='http://localhost:4600/api/services';break;}
-        case "user":{url=`http://localhost:4600/api/user/${opt}`;break;}
-        case "project-dets":{url=`http://localhost:4600/api/project_dets/${opt}`;break;}
+        case "services":{url=`${url}/services`;break;}
+        case "user":{url=`${url}/user/${opt}`;break;}
+        case "project-dets":{url=`${url}/project_dets/${opt}`;break;}
     default:{
         break;}
 };

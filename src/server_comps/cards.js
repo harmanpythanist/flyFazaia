@@ -7,7 +7,7 @@ import { fetch_fnx } from '@/server_fetch/fetch';
 import { cacheLife } from 'next/cache';
 
 const CoursesSection = async({ data,type }) => {
-  cacheLife("hours")
+  // cacheLife("hours")
   console.log(data);
   
 

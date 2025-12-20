@@ -12,10 +12,10 @@ const Header = ({children}) => {
     const ref=useRef(null);
 const {scrollYProgress}=useScroll({target:ref,offset:["start 10%","end start"]});
 const trans_2=useTransform(scrollYProgress,[0,1],[0,-300]);
-const trans_pic_y=useTransform(scrollYProgress,[0,1],[0,-50]);
+const trans_pic_y=useTransform(scrollYProgress,[0,1],[0,-100]);
 
     return (
-        <div className='flex h-[100vh] w-[100vw]  sm:px-4 md:px-6 lg:px-8'>
+        <div  className='flex h-[100vh] w-[100vw]  sm:px-4 md:px-6 lg:px-8'>
         <motion.div variants={parentVar2} initial="initial" animate="animate" ref={ref} className='h-[100vh] w-[100vw] sm:w-[50%] md:w-[45%] lg:w-[50%] flex flex-col justify-center pr-2 sm:pr-4'>
 
              <motion.h1 variants={childVar} className="text-5xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-8xl font-extrabold bg-gradient-to-r from-indigo-600 to-cyan-500 bg-clip-text text-indigo-500 hover:text-indigo-500 transition-all duration-200 cursor-default animate-slideInLeft">
@@ -42,22 +42,22 @@ const trans_pic_y=useTransform(scrollYProgress,[0,1],[0,-50]);
               </Link>
             </motion.div> 
         </motion.div>
-                <motion.div initial={{opacity:0,y:10}} animate={{opacity:1,y:0}} transition={{duration:.3,ease:"easeInOut"}} className="w-[45%] hidden  sm:block md:block lg:block sm:w-1/2 md:w-[5%] lg:w-1/2 h-full flex items-center justify-center px-2 sm:px-4 md:px-6 lg:px-8">
+                <motion.div initial={{rotate:0,opacity:0}} whileHover={{rotate:10,scale:.99}} style={{backfaceVisibility:"hidden",y:trans_pic_y,willChange:"transform"}} animate={{opacity:1,y:0}} transition={{duration:0.5,ease:"linear"}} className="w-[45%] hidden  sm:block md:block lg:block sm:w-1/2 md:w-[5%] lg:w-1/2 h-[60vh] flex items-center justify-center mt-24 ml-32    justify-center px-2 sm:px-4 md:px-6 lg:px-4">
          
 <div
  
-  className="relative h-[50vh] sm:h-[55vh] md:h-[65vh] lg:h-[70vh] w-full max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-lg  mt-24 ml-12 overflow-hidden rounded-lg "
+  className="relative h-full w-full max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-lg  overflow-hidden rounded-lg "
 >
   <motion.img
     src="/ffl1-removebg-preview.png"
-    className="absolute -inset-10 bg-cover bg-center bg-no-repeat"
+    className="absoluteh-[50vh] sm:h-[55vh] md:h-[65vh] lg:h-[65vh] -inset-10 bg-cover bg-center bg-no-repeat"
     style={{
-      y: trans_pic_y,
+      
       backgroundSize: "cover",
     }}
-    autoPlay
-    loop
-    muted
+    // autoPlay
+    // loop
+    // muted
   />
 </div>
 

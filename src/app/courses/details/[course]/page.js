@@ -5,6 +5,7 @@ import React, { Suspense } from 'react';
 import TextComp from './text_comp';
 import { fetch_fnx } from '@/server_fetch/fetch';
 import Link from 'next/link';
+import { cacheLife } from 'next/cache';
 
 const Page = async({params}) => {
 
@@ -30,7 +31,8 @@ return(
 export default Page;
 
 const Page_fetch=async({params})=>{
-
+"use cache"
+cacheLife("hours");
 try {
 let {course}=await params;
   let get=await fetch_fnx("syllabus",decodeURIComponent(course));

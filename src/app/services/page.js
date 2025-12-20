@@ -1,5 +1,8 @@
+"use cache"
+
 import CoursesSection from '@/server_comps/cards';
 import { fetch_fnx } from '@/server_fetch/fetch';
+import { cacheLife } from 'next/cache';
 import Link from 'next/link';
 import React, { Suspense } from 'react';
 
@@ -20,7 +23,7 @@ const services=[{
 
 const Page = async() => {
 
- ;
+ cacheLife("hours");
 
    return (
     <div className='min-h-screen w-full relative flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 m-auto text-red-900 font-bold text-4xl sm:text-5xl lg:text-6xl'>

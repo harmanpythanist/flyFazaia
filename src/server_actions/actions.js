@@ -2,14 +2,14 @@
 
 export const form_submit=async(type,data)=>{
 
-let url=null;
+let url=process.env.NODE_ENV==='production'?process.env.URL:"http://localhost:4600/api";
 let method=null;
 switch (type) {
     case "enroll":{console.log("in enroll",data);
-    url='http://localhost:4600/api/enroll';method="POST";break;}
+    url=`${url}/enroll`;method="POST";break;}
 
   case "serviceForm":{console.log("in serviceForm");
-  ;url='http://localhost:4600/api/service/form';method="POST";break;}
+  ;url=`${url}/service/form`;method="POST";break;}
     default:{ break; }
 
 };

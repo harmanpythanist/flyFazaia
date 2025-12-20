@@ -199,14 +199,7 @@ async function User({ id }) {
                     <span className="font-semibold">Enrolled: {x.enrollment_date}</span>
                   </div>
 
-                  {/* View Details Button */}
-                  <button className="w-full mt-4 px-6 py-3 rounded-xl font-bold text-white 
-                                   bg-gradient-to-r from-indigo-600 to-purple-600 cursor-pointer
-                                   hover:from-indigo-500 hover:to-purple-500
-                                   shadow-lg hover:shadow-xl hover:scale-105
-                                   transition-all duration-300">
-                    View Details →
-                  </button>
+                 
                 </div>
               ))}
             </div>

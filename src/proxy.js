@@ -9,7 +9,7 @@ export const config={matcher:['/','/services/form','/courses/enroll','/user/:pat
 
 
 
-const access_validate=async(request,signal)=>{
+const access_validate=async(request,signal,url)=>{
 
 const user_check=request.cookies.get("user-data")?.value;
 if(user_check){
@@ -34,7 +34,7 @@ console.log("in access");
 console.log(request.nextUrl);
 
     try {
-        let get=await fetch(`http://localhost:4600/api/access_check`,{method:"POST",headers:{'content-type':'application/json','authorization':`${access_check}`},signal});
+        let get=await fetch(`${url}/api/access_check`,{method:"POST",headers:{'content-type':'application/json','authorization':`${access_check}`},signal});
 const conv=await get.json();
 if(!get.ok){console.log(conv);
 ;throw new Error(conv)};
@@ -55,14 +55,14 @@ return resp;
 
 if(error.message.toUpperCase()==="TokenExpiredError".toUpperCase()||error.message.toUpperCase()=="Access Not Found".toUpperCase()){
 console.log("here to call refresh");
-return await refresh_fnx(request,signal);
+return await refresh_fnx(request,signal,url);
 }
 else{
 
     throw error; 
 }}}
 else{
-    return await refresh_fnx(request,signal);
+    return await refresh_fnx(request,signal,url);
 }
 
 };
@@ -70,14 +70,14 @@ else{
 
 
 
-const refresh_fnx=async (request,signal)=>{
+const refresh_fnx=async (request,signal,url)=>{
 
 
 const refresh_check=request.cookies.get("refresh")?.value;
 console.log("in refresh");
 if(!refresh_check){throw new Error("Refresh not found")};
 try {
-    const get=await fetch(`http://localhost:4600/api/refresh_check`,{method:"POST",headers:{'content-type':'application/json','authorization':`${refresh_check}`},signal});
+    const get=await fetch(`${url}/api/refresh_check`,{method:"POST",headers:{'content-type':'application/json','authorization':`${refresh_check}`},signal});
     const conv=await get.json();
     if(!get.ok){throw new Error(conv)};
 console.log(conv);
@@ -108,7 +108,10 @@ return resp;
 
 
 const Middleware =async (request) => {
+    let url=process.env.NODE_ENV==='production'?NEXT_PUBLIC_URL:"http://localhost:4600";
     console.log("mw running");
+    console.log(url);
+    
     const aborter=new AbortController();
    const signal=aborter.signal;
 
@@ -118,7 +121,7 @@ const timer=setTimeout(() => {
 }, 8000);
 
 try {
-    const get=await access_validate(request,signal);
+    const get=await access_validate(request,signal,url);
     clearTimeout(timer);
     return get;
 } catch (error) {

@@ -1,23 +1,16 @@
-// export const revalidate=172800;
+  "use cache"
+
 
 import React, { Suspense } from 'react';
 import CoursesSection from '../../server_comps/cards';
 import { fetch_fnx } from '@/server_fetch/fetch';
 import Link from 'next/link';
+import { cacheLife } from 'next/cache';
 
 
 const Page = async() => {
+cacheLife("hours")
 
-let status={val:false,msg:null,data:null};
-// try {
-//   let get=await fetch_fnx("courses");
-//   status.val=true;status.data=get.data;status.msg=get.msg;
-// } catch (error) {
-//   status.val=false;status.msg=error.message;
-// };
-// console.log(status);
-
-// if(!status.val){}
 
     return (
         <div className='h-full relative flex flex-col items-center justify-center w-[100vw] text-6xl text-white'>
