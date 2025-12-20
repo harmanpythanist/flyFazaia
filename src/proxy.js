@@ -108,7 +108,7 @@ return resp;
 
 
 const Middleware =async (request) => {
-    let url=process.env.NODE_ENV==='production'?NEXT_PUBLIC_URL:"http://localhost:4600";
+    let url=process.env.NODE_ENV==='production'?process.env.NEXT_PUBLIC_URL:"http://localhost:4600";
     console.log("mw running");
     console.log(url);
     
