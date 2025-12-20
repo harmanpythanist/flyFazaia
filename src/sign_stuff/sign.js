@@ -7,7 +7,7 @@ import { SignServeAction } from './sign_serveAction';
 
 const SignUp = () => {
 
-let url=process.env.NODE_ENV==='production'?`${process.env.NEXT_PUBLIC_URL}`:"http://localhost:4600";
+let url=process.env.NODE_ENV==='production'?process.env.NEXT_PUBLIC_URL:"http://localhost:4600";
 
 const pop_callback=useCallback(() => {
   const popUp = window.open(
