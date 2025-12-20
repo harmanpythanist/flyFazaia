@@ -2,7 +2,7 @@
 
 export const form_submit=async(type,data)=>{
 
-let url=process.env.NODE_ENV==='production'?process.env.URL:"http://localhost:4600/api";
+let url=process.env.NODE_ENV==='production'?`${process.env.URL}/api`:"http://localhost:4600/api";
 let method=null;
 switch (type) {
     case "enroll":{console.log("in enroll",data);
