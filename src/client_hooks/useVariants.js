@@ -1,6 +1,3 @@
-import { delay } from 'framer-motion';
-import { del } from 'framer-motion/client';
-import React from 'react';
 
 const UseVariants = () => {
   // Container for whole block
