@@ -1,8 +1,8 @@
 
 
 export const fetch_fnx=async(type,opt)=>{
-   let url=process.env.NODE_ENV==='production'?`${process.env.URL}/api`:"http://localhost:4600/api";
-
+//    let url=process.env.NODE_ENV==='production'?`${process.env.URL}/api`:"http://localhost:4600/api";
+let url="http://localhost:4600/api"
 switch (type) {
     case "courses":
         {url=`${url}/courses?type=full`;
