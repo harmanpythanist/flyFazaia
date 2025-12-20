@@ -20,7 +20,7 @@ export const enroll_fnx=async(course,id,contact)=>{
  if(!check||check.length==0){throw new Error("User not authenticated")};
 
 let uid=uuid()
- await db.execute(`insert into enrollment (id,course_title,user_id,enrollment_date,user_contact) values(?,?,?,now(),?)`,
+ await  db.execute(`insert into enrollment (id,course_title,user_id,enrollment_date,user_contact) values(?,?,?,now(),?)`,
     [uid,course,id,contact])
    
     return {msg:"Enrolled Successfully "};
