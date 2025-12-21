@@ -2,10 +2,10 @@
 
 export const fetch_fnx=async(type,opt)=>{
 //    let url=process.env.NODE_ENV==='production'?`${process.env.URL}/api`:"http://localhost:4600/api";
-let url="http://localhost:4600/api"
+let url="http://localhost:4600"
 switch (type) {
     case "courses":
-        {url=`${url}/courses?type=full`;
+        {url=`${url}/api/courses?type=full`;
         break;
 }
 case "syllabus":{url=`${url}/syllabus?id=${opt}`;break;}

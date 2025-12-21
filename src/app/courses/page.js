@@ -1,4 +1,4 @@
-  "use cache"
+  // "use cache"
 
 
 import React, { Suspense } from 'react';
@@ -9,7 +9,7 @@ import { cacheLife } from 'next/cache';
 
 
 const Page = async() => {
-cacheLife("hours")
+// cacheLife("hours")
 
 
     return (
