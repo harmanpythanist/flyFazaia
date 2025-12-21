@@ -51,12 +51,7 @@ console.log(get);
         </div>
     );
 } catch (error) {
-  return <div className='text-6xl mt-44 text-indigo-500 font-black flex flex-col items-center justify-center'> <div className='mt-44'>  <Link
-                href={'/courses'}
-                className="w-24 h-[40px] mb-12 text-xl  hover:scale-101 cursor-pointer transition-scale duration-300 text-white bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center"
-                >
-                 Back
-                </Link>
+  return <div className='text-6xl mt-44 text-indigo-500 font-black flex flex-col items-center justify-center'> <div className='mt-44'> 
                 </div> <p>Fetch Failed</p><p className='text-2xl text-gray-600'>{error.message}</p></div>
 };
 

@@ -82,12 +82,12 @@ return (  <CoursesSection data={get.data} type="Courses"/> )
    return (
     <div className='min-h-screen w-full px-4 sm:px-6 text-4xl sm:text-5xl lg:text-6xl mt-32 sm:mt-36 md:mt-44 text-indigo-500 font-black flex flex-col items-center justify-center'>
       <div className='mb-8 sm:mb-12'>
-        <Link
+        {/* <Link
           href={'/courses'}
           className="w-20 sm:w-24 h-[36px] sm:h-[40px] mb-8 sm:mb-12 text-lg sm:text-xl hover:scale-105 cursor-pointer transition-transform duration-300 text-white bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center"
         >
           Back
-        </Link>
+        </Link> */}
       </div>
       <p className='text-center'>Fetch Failed</p>
       <p className='text-lg sm:text-xl md:text-2xl text-gray-600 mt-4 text-center px-4'>
