@@ -1,11 +1,11 @@
   // "use cache"
-export const dynamic="force-dynamic"
+// export const dynamic="force-dynamic"
 
 import React, { Suspense } from 'react';
 import CoursesSection from '../../server_comps/cards';
 import { fetch_fnx } from '@/server_fetch/fetch';
 import Link from 'next/link';
-import { cacheLife } from 'next/cache';
+// import { cacheLife } from 'next/cache';
 
 
 const Page = async() => {

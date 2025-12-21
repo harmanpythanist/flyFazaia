@@ -18,7 +18,7 @@ case "course-list":{url=`${url}/courses?type=list`;
         break;}
 };
 try {
-    let get=await fetch(url,{cache:"no-store"});
+    let get=await fetch(url,{cache:"no-cache",});
     let conv=await get.json()
 if(!get.ok){
 ;throw new Error(conv||"Server Fetch failed")};
