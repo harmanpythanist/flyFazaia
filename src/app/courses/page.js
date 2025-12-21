@@ -1,20 +1,16 @@
-  // "use cache"
+  "use cache"
 // export const dynamic="force-dynamic"
 
 import React, { Suspense } from 'react';
 import CoursesSection from '../../server_comps/cards';
 import { fetch_fnx } from '@/server_fetch/fetch';
 import Link from 'next/link';
-import { cookies } from 'next/headers';
-// import { cacheLife } from 'next/cache';
+import { cacheLife } from 'next/cache';
 
 
 const Page = async() => {
-// cacheLife("hours")
-let cookie=await cookies();
-let access=cookie.get("access")?.value;
-if(access){console.log("access is =",access);
-}
+cacheLife("hours")
+
 
     return (
         <div className='h-full relative flex flex-col items-center justify-center w-[100vw] text-6xl text-white'>
@@ -49,7 +45,7 @@ if(access){console.log("access is =",access);
         </Link>
       </div> 
   <div className='w-full mt-44 sm:mt-36 md:mt-16 lg:mt-24'>
-<Suspense fallback={
+{/* <Suspense fallback={
                 <div className="flex items-center justify-center lg:mt-44 h-64">
                   <div className="text-center">
                     <div className="w-16 h-16 border-4 border-indigo-600 border-t-transparent 
@@ -57,11 +53,11 @@ if(access){console.log("access is =",access);
                     <p className="text-indigo-700 text-xl font-bold">Loading...</p>
                   </div>
                 </div>
-              }>
+              }> */}
    
         <DynamicContent/>
 
-</Suspense>
+{/* </Suspense> */}
 
       </div>
             
