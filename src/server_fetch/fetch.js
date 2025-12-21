@@ -2,10 +2,10 @@
 
 export const fetch_fnx=async(type,opt)=>{
 //    let url=process.env.NODE_ENV==='production'?`${process.env.URL}/api`:"http://localhost:4600/api";
-let url="http://localhost:4600"
+let url="http://localhost:4600/api"
 switch (type) {
     case "courses":
-        {url=`${url}/api/courses?type=full`;
+        {url=`${url}/courses?type=full`;
         break;
 }
 case "syllabus":{url=`${url}/syllabus?id=${opt}`;break;}
@@ -18,7 +18,7 @@ case "course-list":{url=`${url}/courses?type=list`;
         break;}
 };
 try {
-    let get=await fetch(url,{cache:"no-cache",});
+    let get=await fetch(url,{cache:"no-store"});
     let conv=await get.json()
 if(!get.ok){
 ;throw new Error(conv||"Server Fetch failed")};

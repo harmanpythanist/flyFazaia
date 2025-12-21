@@ -5,12 +5,16 @@ import React, { Suspense } from 'react';
 import CoursesSection from '../../server_comps/cards';
 import { fetch_fnx } from '@/server_fetch/fetch';
 import Link from 'next/link';
+import { cookies } from 'next/headers';
 // import { cacheLife } from 'next/cache';
 
 
 const Page = async() => {
 // cacheLife("hours")
-
+let cookie=await cookies();
+let access=cookie.get("access")?.value;
+if(access){console.log("access is =",access);
+}
 
     return (
         <div className='h-full relative flex flex-col items-center justify-center w-[100vw] text-6xl text-white'>
