@@ -4,10 +4,11 @@ import { motion,useTransform,useScroll, easeInOut } from 'framer-motion';
 import { TypeWriter } from '@/client_comps/typeWriter';
 import UseVariants from '../../client_hooks/useVariants';
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 const Header = ({children}) => {
-
+const MotionImg=motion(Image);
   const {grandParentVar,childVar,parentVar2}=UseVariants()
     const ref=useRef(null);
 const {scrollYProgress}=useScroll({target:ref,offset:["start 10%","end start"]});
@@ -48,16 +49,18 @@ const trans_pic_y=useTransform(scrollYProgress,[0,1],[0,-100]);
  
   className="relative h-full w-full max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-lg  overflow-hidden rounded-lg "
 >
-  <motion.img
-    src="/ffl1-removebg-preview.png"
-    className="absoluteh-[50vh] sm:h-[55vh] md:h-[65vh] lg:h-[65vh] -inset-10 bg-cover bg-center bg-no-repeat"
-    style={{
-      
-      backgroundSize: "cover",
-    }}
-    // autoPlay
-    // loop
-    // muted
+  <MotionImg
+     src="/ffl1-removebg-preview.png"
+  alt="Fly Fazaia logo"
+  fill
+  priority  // Load immediately (above fold)
+  quality={90}
+  sizes="(max-width: 640px) 50vh, (max-width: 768px) 55vh, 65vh"
+  className="object-cover object-center"
+  style={{
+    objectFit: 'cover',
+  }}
+
   />
 </div>
 

@@ -5,10 +5,12 @@ import SignUp from '@/sign_stuff/sign';
 import { useRouter } from 'next/navigation';
 import {logOut_fnx} from '../../server_actions/logout_serviceAction'
 import Link from 'next/link';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const FlyFazaiaNavbar = ({data}) => {
   console.log("data");
-  
+  const MotionImg=motion(Image);
 const router=useRouter();
 console.log("NAV bar rendered");
 
@@ -51,21 +53,24 @@ const sign_display = useMemo(() => {
       <div className="container mx-auto  px-6">
         <nav className="flex items-center justify-between py-4">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="relative">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-600 rounded-xl transform rotate-12 flex items-center justify-center shadow-lg">
-                <div className="w-6 h-6 bg-white rounded-lg transform -rotate-12 flex items-center justify-center">
-                  <div className="w-3 h-3 bg-blue-600 rounded-sm"></div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-                Fly Fazaia
-              </span>
-              <div className="text-xs text-blue-600 font-medium -mt-1">AI Academy</div>
-            </div>
-          </div>
+      <div className="flex items-center space-x-3">
+  <MotionImg
+    src="/ffl1-removebg-preview.png"
+    alt="Fly Fazaia logo"
+    width={48}
+    height={48}
+    priority
+    quality={90}
+    className="object-contain"
+  />
+  
+  <div>
+    <span className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+      Fly Fazaia
+    </span>
+    <div className="text-xs text-blue-600 font-medium -mt-1">AI Academy</div>
+  </div>
+</div>
 
           {/* Main Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
