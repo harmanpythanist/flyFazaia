@@ -1,8 +1,11 @@
+"use cache"
 import ListAnimation, { Headings_appear } from '@/client_comps/list_animation';
 import TechWritingPlate from '@/client_comps/tech_writing_plate';
+import { cacheLife } from 'next/cache';
 import React from 'react';
 
-const Page = () => {
+const Page =async () => {
+   cacheLife('max') 
      const expertise = [
     { icon: "🐍", title: "Python, R & C", desc: "Core programming expertise" },
     { icon: "🤖", title: "ML & Deep Learning", desc: "Advanced AI solutions" },

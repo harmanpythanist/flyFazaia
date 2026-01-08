@@ -148,39 +148,48 @@ const sign_display = useMemo(() => {
         </nav>
 
         {/* Mobile Menu */}
-        <div className={`lg:hidden overflow-hidden transition-all duration-300 ${
-          isMenuOpen ? 'h-screen opacity-100 pb-6 ' : 'max-h-0 opacity-0'
-        } bg-gray-100`}>
-          <div className="pt-4 border-t border-gray-200 space-y-4">
-            <button  onClick={()=>{router.push(`/`)}} className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl font-medium transition-colors duration-200">
-              Home
-            </button>
-            <div className="px-4">
-              <div className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Courses</div>
-              <div className="space-y-2 ml-4">
-                {courses.slice(0, 3).map((course, index) => (
-                  <button  onClick={()=>{router.push(`/courses/details/${course.id}`)}} key={index}  className="flex items-center space-x-2 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200">
-                    <span>{course.icon}</span>
-                    <span>{course.name}</span>
-                  </button >
-                ))}
-              </div>
-            </div>
-           <div >
-           <SignUp/>
-            </div>
+       {/* Mobile Menu */}
+<div className={`lg:hidden overflow-hidden transition-all duration-300 ${
+  isMenuOpen ? 'h-[90vh] opacity-100 pb-6 ' : 'max-h-0 opacity-0'
+} bg-gray-100`}>
+  <div className="pt-4 border-t border-gray-200 space-y-4 space-y-2 ml-4">
+    <button onClick={()=>{router.push(`/`)}} className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl font-medium transition-colors duration-200">
+      Home
+    </button>
+    
+    <div className="px-4">
+      <div className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Courses</div>
+      <div className="space-y-2 ml-4">
+        {courses.slice(0, 3).map((course, index) => (
+          <button onClick={()=>{router.push(`/courses/details/${course.id}`)}} key={index} className="flex items-center space-x-2 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200">
+            <span>{course.icon}</span>
+            <span>{course.name}</span>
+          </button>
+        ))}
+      </div>
+    </div>
 
-{ data.status&& <button onClick={()=>{logOut_fnx()}}  className="w-24 h-[50px] hover:scale-101 cursor-pointer transition-scale duration-300 text-white bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center"
-              >
-              LogOut
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
-            </button>}
+    <button onClick={()=>{router.push("/policy")}} className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl font-medium transition-colors duration-200">
+      Policies/Terms
+    </button>
 
-            <div className="px-4 pt-4 border-t border-gray-200">
-            
-            </div>
-          </div>
-        </div>
+    <button onClick={()=>{router.push("/about")}} className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl font-medium transition-colors duration-200">
+      About Us
+    </button>
+
+    <div>
+      <SignUp/>
+    </div>
+
+    {data.status && <button onClick={()=>{logOut_fnx()}} className="w-34 h-[50px] hover:scale-101 cursor-pointer transition-scale duration-300 text-white bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
+      LogOut
+      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
+    </button>}
+
+    <div className="px-4 pt-4 border-t border-gray-200">
+    </div>
+  </div>
+</div>
       </div>
     </header>
   );

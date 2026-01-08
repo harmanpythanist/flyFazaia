@@ -31,7 +31,13 @@ export default function RootLayout({ children }) {
       >
         <SmoothScroll/>
        
-    <Suspense fallback={<p className="text-black text-6xl"></p>}><NavServer/></Suspense> 
+    <Suspense fallback={<div className="flex items-center justify-center lg:mt-44 h-64">
+                  <div className="text-center">
+                    <div className="w-16 h-16 border-4 border-indigo-600 border-t-transparent 
+                                  rounded-full animate-spin mx-auto mb-4"></div>
+                    {/* <p className="text-indigo-700 text-xl font-bold">Loading...</p> */}
+                  </div>
+                </div>}><NavServer/></Suspense> 
       
         {children}
         <Footer/>

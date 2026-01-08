@@ -18,9 +18,7 @@ const Page = async () => {
                   </div>
                 </div>
               }>
-             {new Promise((resolv=>setTimeout(() => {
-           return  resolv(<Auth />)
-             }, 4000)))   }
+             {<Auth/> }
               </Suspense>)
 };
 

@@ -30,13 +30,13 @@ const trans_pic_y=useTransform(scrollYProgress,[0,1],[0,-100]);
             <motion.div style={{y:trans_pic_y}} className="flex flex-col sm:flex-row justify-start gap-2 sm:gap-3 md:gap-4 lg:gap-6 mt-3 sm:mt-4 md:mt-6 w-full sm:w-[35vw] md:w-[32vw] lg:w-[30vw] animate-slideInLeft">
              <Link
                 href="/courses"
-                className="group cursor-pointer h-[30px] w-[40vw] sm:w-[30vw] sm:h-[45px] md:h-[55px] lg:h-[60px] justify-center flex items-center rounded-full bg-gradient-to-r from-indigo-600 to-cyan-400 px-3 sm:px-4 md:px-5 lg:px-6 py-2 sm:py-2.5 md:py-3 text-xs sm:text-sm md:text-base font-bold text-white shadow hover:bg-indigo-700 hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 transition-all duration-300"
+                className="group cursor-pointer z-90 h-[30px] w-[40vw] sm:w-[30vw] sm:h-[45px] md:h-[55px] lg:h-[60px] justify-center flex items-center rounded-full bg-gradient-to-r from-indigo-600 to-cyan-400 px-3 sm:px-4 md:px-5 lg:px-6 py-2 sm:py-2.5 md:py-3 text-xs sm:text-sm md:text-base font-bold text-white shadow hover:bg-indigo-700 hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 transition-all duration-300"
               >
                 <span className="group-hover:animate-pulse">View Courses</span>
               </Link>
               <Link
                 href="/about"
-                className="group cursor-pointer h-[30px] w-[40vw] sm:w-[30vw]  sm:h-[45px] md:h-[55px] lg:h-[60px] justify-center bg-gray-300 flex items-center rounded-full border border-slate-300 px-3 sm:px-4 md:px-5 lg:px-6 py-2 sm:py-2.5 md:py-3 text-xs sm:text-sm md:text-base font-semibold text-slate-700 hover:bg-slate-100 hover:border-indigo-400 hover:text-indigo-700 transform hover:-translate-y-1 hover:scale-105 transition-all duration-300"
+                className="group cursor-pointer z-90 h-[30px] w-[40vw] sm:w-[30vw]  sm:h-[45px] md:h-[55px] lg:h-[60px] justify-center bg-gray-300 flex items-center rounded-full border border-slate-300 px-3 sm:px-4 md:px-5 lg:px-6 py-2 sm:py-2.5 md:py-3 text-xs sm:text-sm md:text-base font-semibold text-slate-700 hover:bg-slate-100 hover:border-indigo-400 hover:text-indigo-700 transform hover:-translate-y-1 hover:scale-105 transition-all duration-300"
               >
                 <span className="group-hover:animate-pulse">Learn More</span>
               </Link>
