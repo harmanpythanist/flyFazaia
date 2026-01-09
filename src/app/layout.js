@@ -16,21 +16,30 @@ import { Suspense } from "react";
 //   subsets: ["latin"],
 // });
 export const metadata = {
-  // Use your current live URL
-  metadataBase: new URL('https://fly-fazaia.vercel.app'), 
+  metadataBase: new URL('https://fly-fazaia.vercel.app'),
   title: {
-    default: 'FlyFazaia | AI/ML Services & Python Mastery',
+    default: 'FlyFazaia | Professional AI/ML Services & Python Courses', 
     template: '%s | FlyFazaia',
   },
-  description: 'Top-rated AI/ML freelancing and Python courses. Serving global clients with premium Machine Learning solutions from Pakistan.',
-  keywords: ['AI Freelancing', 'Python Courses Pakistan', 'Machine Learning Solutions', 'Learn AI online'],
-  alternates: {
-    canonical: 'https://fly-fazaia.vercel.app',
-  },
+  description: 'Expert AI/ML freelancing and Python programming courses. Transform your business with custom Machine Learning solutions or master AI today.',
+  keywords: ['AI Freelancing', 'Python Courses Pakistan', 'Machine Learning Solutions', 'Learn AI online', 'FlyFazaia'],
   openGraph: {
-    images: '/og-image.png', // This will now resolve to https://fly-fazaia.vercel.app/og-image.png
-  }
-};
+    title: 'FlyFazaia | AI/ML Services & Python Courses',
+    description: 'Master AI and Machine Learning with our professional courses and freelance services.',
+    url: 'https://fly-fazaia.vercel.app',
+    siteName: 'FlyFazaia',
+    images: [
+      {
+        url: '/og-image.png', 
+        width: 1200,
+        height: 630,
+        alt: 'FlyFazaia - AI/ML Services and Python Courses',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+};;
 
 export default function RootLayout({ children }) {
   console.log("root rendered");
