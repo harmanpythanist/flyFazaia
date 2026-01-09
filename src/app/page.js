@@ -2,11 +2,9 @@
 
 import Services from "./services";
 import CardsHeader from "@/client_comps/cards_header";
-import { TypeWriter } from "@/client_comps/typeWriter";
+
 import Header from "./home_comps/header";
 import ListAnimation, { Headings_appear } from "@/client_comps/list_animation";
-import ImageSlider from "@/app/home_comps/header_courses";
-import CoursesSection from "@/app/home_comps/header_courses";
 import Courses from "./home_comps/courses";
 import FAQs from "./home_comps/faq";
 import TechWritingPlate from "@/client_comps/tech_writing_plate";

@@ -14,6 +14,7 @@ case "course-list":{url=`${url}/courses?type=list`;
         case "services":{url=`${url}/services`;break;}
         case "user":{url=`${url}/user/${opt}`;break;}
         case "project-dets":{url=`${url}/project_dets/${opt}`;break;}
+        case "seo-sitemap":{url=`${url}/sitemap`;break;}
     default:{
         break;}
 };
