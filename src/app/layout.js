@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans, Poppins } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "./smoothScroll";
 import FlyFazaiaNavbar from "./home_comps/navBar";
@@ -6,15 +6,19 @@ import Footer from "./home_comps/footer";
 import { NavServer } from "./home_comps/navServerAction";
 import { Suspense } from "react";
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
+const plusJakarta = Plus_Jakarta_Sans({
+  variable: "--font-plus-jakarta",
+  subsets: ["latin"],
+  weight: ["300", "400", "600"],
+  display: "swap",
+});
 
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  display: "swap",
+});
 export const metadata = {
   metadataBase: new URL('https://fly-fazaia.vercel.app'),
   title: {
@@ -47,7 +51,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body 
-        className={` antialiased custom-grid-background`}
+        className={`${plusJakarta.variable} ${poppins.variable} antialiased custom-grid-background`}
       >
         <SmoothScroll/>
           
@@ -60,7 +64,10 @@ export default function RootLayout({ children }) {
                     {/* <p className="text-indigo-700 text-xl font-bold">Loading...</p> */}
               
                 </div>}>{
-                   <NavServer/>}</Suspense> 
+                  //  <NavServer/>
+                   
+                   }</Suspense> 
+                   
       
         {children}
         <Footer/>

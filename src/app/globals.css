@@ -8,8 +8,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-plus-jakarta);
+  --font-headline: var(--font-plus-jakarta);
+  --font-kids: var(--font-poppins);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,7 +23,17 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Headlines use Satoshi for a distinctive variable look */
+h1,h2,h3,h4,h5,h6 {
+  font-family: var(--font-headline), system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+/* Utility for kid-friendly sections (Python for Kids) */
+.kids-font {
+  font-family: var(--font-kids), system-ui, -apple-system, "Segoe UI", Roboto, Arial;
 }
 html {
   scroll-behavior: auto; /* Let Lenis handle smoothing */
