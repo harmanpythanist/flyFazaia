@@ -67,7 +67,7 @@ export default function RootLayout({ children }) {
                   //  <NavServer/>
                    
                    }</Suspense> 
-                   <FlyFazaiaNavbar data={ {status:false,msg:error.message}}/>
+                   <FlyFazaiaNavbar data={ {status:false,msg:"error.message"}}/>
                    
       
         {children}
