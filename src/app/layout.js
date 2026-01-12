@@ -64,7 +64,7 @@ export default function RootLayout({ children }) {
                     {/* <p className="text-indigo-700 text-xl font-bold">Loading...</p> */}
               
                 </div>}>{
-                  //  <NavServer/>
+                   <NavServer/>
                    
                    }</Suspense> 
                    <FlyFazaiaNavbar data={ {status:false,msg:"error.message"}}/>
