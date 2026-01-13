@@ -96,8 +96,3 @@ const SignUp = () => {
 }
 
 export default SignUp;
-```
-
-## About the COOP Warning:
-```
-// Cross-Origin-Opener-Policy policy would block the window.closed call.
