@@ -28,7 +28,7 @@ const pop_callback=useCallback(() => {
   const listener = async (e) => {
     console.log("Message received:", e.data);
 
-    if (e.origin !== "http://localhost:4600"||e.origin!==url) return; // backend origin check ✅
+    if (e.origin !== "http://localhost:4600"||e.origin!==`${url}/api`) return; // backend origin check ✅
 
     try {
       const fnx = await SignServeAction(e.data);
