@@ -4,8 +4,9 @@ import React, { useCallback } from 'react';
 import { SignServeAction } from './sign_serveAction';
 
 const SignUp = () => {
+  // ✅ Trim to remove any \n or whitespace
   let url = process.env.NODE_ENV === 'production' 
-    ? process.env.NEXT_PUBLIC_URL 
+    ? process.env.NEXT_PUBLIC_URL?.trim() 
     : "http://localhost:4600";
 
   const pop_callback = useCallback(() => {
@@ -42,11 +43,11 @@ const SignUp = () => {
       }
       processed = true;
 
-      // ✅ Origin check AFTER type check (more lenient for debugging)
+      // ✅ Trim all origins before comparing
       const allowedOrigins = [
         "http://localhost:4600",
-        url,
-        process.env.NEXT_PUBLIC_URL
+        url?.trim(),
+        process.env.NEXT_PUBLIC_URL?.trim()
       ].filter(Boolean);
       
       if (!allowedOrigins.includes(e.origin)) {
