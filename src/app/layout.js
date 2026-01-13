@@ -56,18 +56,11 @@ export default function RootLayout({ children }) {
         <SmoothScroll/>
           
 
-    <Suspense fallback={<div className="fixed  max-h-40 top-2 w-full z-90 transition-all duration-300 
-     'bg-white/95 backdrop-blur-lg shadow-lg border-b border-gray-200">
-
-                    <div className="w-8 h-8 border-4 border-indigo-600 border-t-transparent 
-                                  rounded-full animate-spin mx-auto mb-4"></div>
-                    {/* <p className="text-indigo-700 text-xl font-bold">Loading...</p> */}
-              
-                </div>}>{
+    <Suspense fallback={ <FlyFazaiaNavbar data={ {status:false,msg:"error.message"}}/>}>{
                    <NavServer/>
                    
                    }</Suspense> 
-                   <FlyFazaiaNavbar data={ {status:false,msg:"error.message"}}/>
+                  
                    
       
         {children}
