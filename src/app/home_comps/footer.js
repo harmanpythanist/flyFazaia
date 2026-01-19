@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Footer = () => {
@@ -50,33 +51,11 @@ const Footer = () => {
               </h6>
               <div className="w-12 h-1 bg-gradient-to-r from-indigo-500 to-cyan-400 mb-4 group-hover:w-16 transition-all duration-300" />
               <p className="text-gray-600 text-sm leading-relaxed font-medium">
-                Engine Finders is the **UK&apos;s** top price comparison website for Used &amp; Reconditioned Car Engines. We
-                can help you save up to 60% on engine replacement cost by instantly connecting you with hundreds
-                of verified suppliers nationwide.
+              Expert AI/ML freelancing and Python programming courses. Transform your business with custom Machine Learning solutions or master AI today.
               </p>
             </div>
 
-            {/* Quick Links */}
-            <div className="group lg:flex lg:flex-col lg:items-center">
-              <h6 className="text-2xl font-extrabold bg-gradient-to-r from-indigo-600 to-cyan-400 bg-clip-text text-transparent mb-6 lg:ms-[-80px] hover:scale-105 transition-transform duration-300">
-                Quick Links
-              </h6>
-              <div className="w-12 h-1 bg-gradient-to-r from-indigo-500 to-cyan-400 mb-4 lg:ms-[-80px] group-hover:w-16 transition-all duration-300" />
-              <ul className="space-y-3 text-sm font-medium">
-                {["Blog", "Reviews", "Sitemap", "Frequently Asked Questions", "Newsletter"].map((label) => (
-                  <li key={label} className="group/item">
-                    <a
-                      href={`./${label.toLowerCase().replace(/\s+/g, "-")}`}
-                      className="text-gray-600 hover:text-indigo-600 transition-all duration-300 flex items-center group-hover/item:translate-x-2"
-                    >
-                      <div className="w-0 h-px bg-gradient-to-r from-indigo-400 to-cyan-400 group-hover/item:w-4 transition-all duration-300 mr-0 group-hover/item:mr-2" />
-                      {label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
+          
             {/* Contact Us */}
             <div className="group space-y-4">
               <h6 className="text-2xl font-extrabold bg-gradient-to-r from-indigo-600 to-cyan-400 bg-clip-text text-transparent mb-6 hover:scale-105 transition-transform duration-300">
@@ -89,45 +68,25 @@ const Footer = () => {
                   <div className="w-8 h-8 bg-gradient-to-r from-indigo-500 to-cyan-400 rounded-full flex items-center justify-center mr-3 group-hover/contact:scale-110 transition-transform duration-300">
                     <i className="fa fa-envelope text-white text-xs"></i>
                   </div>
-                  <a
+                  <span
                     href="https://mail.google.com/mail/?view=cm&fs=1&to=Info@enginefinders.co.uk"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:underline"
                   >
-                    Info@enginefinders.co.uk
-                  </a>
+                    harmanwaheed@gmail.com
+                  </span>
                 </div>
 
                 <div className="text-gray-600 text-sm font-medium flex items-center group/contact hover:text-indigo-600 transition-colors duration-300">
                   <div className="w-8 h-8 bg-gradient-to-r from-indigo-500 to-cyan-400 rounded-full flex items-center justify-center mr-3 group-hover/contact:scale-110 transition-transform duration-300">
                     <i className="fa-solid fa-phone text-white text-xs"></i>
                   </div>
-                  <a href="tel:+442034884649" className="hover:underline">020 3488 4649</a>
+                  
+                  <span  className="hover:underline">+92 3329555307</span>
                 </div>
 
-                <div className="text-gray-600 text-sm font-medium flex items-center group/contact hover:text-indigo-600 transition-colors duration-300">
-                  <div className="w-8 h-8 bg-gradient-to-r from-indigo-500 to-cyan-400 rounded-full flex items-center justify-center mr-3 group-hover/contact:scale-110 transition-transform duration-300">
-                    <i className="fa-brands fa-whatsapp text-white text-xs"></i>
-                  </div>
-                  <a href="https://wa.me/447311343662" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                    07311 343662
-                  </a>
-                </div>
-
-                <div className="text-gray-600 text-sm font-medium flex items-center group/contact hover:text-indigo-600 transition-colors duration-300">
-                  <div className="w-8 h-8 bg-gradient-to-r from-indigo-500 to-cyan-400 rounded-full flex items-center justify-center mr-3 group-hover/contact:scale-110 transition-transform duration-300">
-                    <i className="fa-regular fa-comments text-white text-xs"></i>
-                  </div>
-                  <a href="./contact-us" className="hover:underline">Contact us</a>
-                </div>
-
-                <div className="text-gray-600 text-sm font-medium flex items-center group/contact hover:text-indigo-600 transition-colors duration-300">
-                  <div className="w-8 h-8 bg-gradient-to-r from-indigo-500 to-cyan-400 rounded-full flex items-center justify-center mr-3 group-hover/contact:scale-110 transition-transform duration-300">
-                    <i className="fa-solid fa-headset text-white text-xs"></i>
-                  </div>
-                  <a href="./live-chat" className="hover:underline">Live Chat</a>
-                </div>
+                
               </div>
             </div>
 
@@ -139,20 +98,18 @@ const Footer = () => {
               <div className="w-12 h-1 bg-gradient-to-r from-indigo-500 to-cyan-400 mb-4 lg:ms-[-80px] group-hover:w-16 transition-all duration-300" />
               <ul className="space-y-3 text-sm font-medium">
                 {[
-                  { href: "./about-us", label: "About Us" },
-                  { href: "./privacy-policy", label: "Privacy Policy" },
-                  { href: "./terms-and-condition", label: "Terms & Conditions" },
-                  { href: "./cookies-policy", label: "Cookies Policy" },
-                  { href: "./legal-disclaimer", label: "Legal Disclaimers" },
+                  { href: "/about", label: "About Us" },
+                  { href: "/policy", label: "Privacy Policy" },
+                  
                 ].map((link) => (
                   <li key={link.href} className="group/item">
-                    <a 
+                    <Link 
                       href={link.href} 
                       className="text-gray-600 hover:text-indigo-600 transition-all duration-300 flex items-center group-hover/item:translate-x-2"
                     >
                       <div className="w-0 h-px bg-gradient-to-r from-indigo-400 to-cyan-400 group-hover/item:w-4 transition-all duration-300 mr-0 group-hover/item:mr-2" />
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
