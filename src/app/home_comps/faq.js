@@ -45,60 +45,84 @@ const FAQs = () => {
         <div className="overflow-y-auto max-w-full sm:max-w-[85vw] md:max-w-[75vw] lg:max-w-[65vw] xl:max-w-[60vw] m-auto max-h-[400px] sm:max-h-[450px] md:max-h-[500px] space-y-3 sm:space-y-4 mt-8 sm:mt-10 md:mt-12 pr-2 scrollbar-thin scrollbar-thumb-gray-300 hover:scrollbar-thumb-gray-400 scrollbar-track-transparent">
           <details className="group bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:scale-[1.01] hover:border-indigo-300">
             <summary className="cursor-pointer w-full p-4 sm:p-5 md:p-6 font-semibold text-gray-800 text-base sm:text-lg md:text-xl group-hover:text-indigo-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded-xl sm:rounded-2xl">
-              How do I book a trip on Wandering Hart?
+              Who are these courses for?
             </summary>
             <div className="px-4 sm:px-5 md:px-6 pb-4 sm:pb-5 md:pb-6">
               <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mb-3 sm:mb-4" />
               <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
-                Simply search for your destination, choose your travel dates, and select from our list of top-rated hotels, flights, and experiences. You can complete your booking directly on our secure platform.
+                Our courses are designed for school students, college/university students, and beginners to intermediate learners who want to build strong skills in programming, AI, and computer science.
               </p>
             </div>
           </details>
 
           <details className="group bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:scale-[1.01] hover:border-indigo-300">
             <summary className="cursor-pointer w-full p-4 sm:p-5 md:p-6 font-semibold text-gray-800 text-base sm:text-lg md:text-xl group-hover:text-indigo-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded-xl sm:rounded-2xl">
-              Do you offer travel packages?
+              Do I need prior programming knowledge to enroll?
             </summary>
             <div className="px-4 sm:px-5 md:px-6 pb-4 sm:pb-5 md:pb-6">
               <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mb-3 sm:mb-4" />
               <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
-                Yes, we offer curated travel packages that include accommodation, activities, and guided tours for popular destinations like London, Tokyo, Paris, Seoul, and Istanbul.
+                Not necessarily. Many courses start from basics and gradually move to advanced concepts. Prerequisites (if any) are clearly mentioned on each course page.
               </p>
             </div>
           </details>
 
           <details className="group bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:scale-[1.01] hover:border-indigo-300">
             <summary className="cursor-pointer w-full p-4 sm:p-5 md:p-6 font-semibold text-gray-800 text-base sm:text-lg md:text-xl group-hover:text-indigo-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded-xl sm:rounded-2xl">
-              Can I cancel or change my booking?
+              Are the courses suitable for beginners?
             </summary>
             <div className="px-4 sm:px-5 md:px-6 pb-4 sm:pb-5 md:pb-6">
               <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mb-3 sm:mb-4" />
               <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
-                Most bookings can be canceled or modified depending on the **hotel&apos;s** or **airline&apos;s** policy. Check your booking confirmation for specific terms before making changes.
+                Yes. We offer beginner-friendly courses as well as intermediate and advanced tracks.
               </p>
             </div>
           </details>
 
           <details className="group bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:scale-[1.01] hover:border-indigo-300">
             <summary className="cursor-pointer w-full p-4 sm:p-5 md:p-6 font-semibold text-gray-800 text-base sm:text-lg md:text-xl group-hover:text-indigo-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded-xl sm:rounded-2xl">
-              Do you provide travel insurance?
+              Do you provide certificates?
             </summary>
             <div className="px-4 sm:px-5 md:px-6 pb-4 sm:pb-5 md:pb-6">
               <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mb-3 sm:mb-4" />
               <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
-                Yes, you can add travel insurance to your booking for coverage on trip cancellations, medical emergencies, and lost luggage.
+                Yes. A certificate of completion is provided after successfully completing a course.
               </p>
             </div>
           </details>
 
           <details className="group bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:scale-[1.01] hover:border-indigo-300">
             <summary className="cursor-pointer w-full p-4 sm:p-5 md:p-6 font-semibold text-gray-800 text-base sm:text-lg md:text-xl group-hover:text-indigo-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded-xl sm:rounded-2xl">
-              How can I find the best travel deals?
+              Will I be prepared for exams, interviews, or assessments?
             </summary>
             <div className="px-4 sm:px-5 md:px-6 pb-4 sm:pb-5 md:pb-6">
               <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mb-3 sm:mb-4" />
               <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
-                Use our search filters to compare prices and subscribe to our newsletter for exclusive seasonal offers and last-minute deals.
+                Yes. Our teaching approach focuses on concepts, problem-solving, and practical implementation to help in exams and interviews.
+              </p>
+            </div>
+          </details>
+
+          <details className="group bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:scale-[1.01] hover:border-indigo-300">
+            <summary className="cursor-pointer w-full p-4 sm:p-5 md:p-6 font-semibold text-gray-800 text-base sm:text-lg md:text-xl group-hover:text-indigo-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded-xl sm:rounded-2xl">
+              Do you offer final year / semester projects?
+            </summary>
+            <div className="px-4 sm:px-5 md:px-6 pb-4 sm:pb-5 md:pb-6">
+              <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mb-3 sm:mb-4" />
+              <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
+                Yes. We provide complete guidance and development support for academic projects in Python, ML, AI, and related domains.
+              </p>
+            </div>
+          </details>
+
+          <details className="group bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:scale-[1.01] hover:border-indigo-300">
+            <summary className="cursor-pointer w-full p-4 sm:p-5 md:p-6 font-semibold text-gray-800 text-base sm:text-lg md:text-xl group-hover:text-indigo-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded-xl sm:rounded-2xl">
+              Do you provide full fledge solutions to tech problems?
+            </summary>
+            <div className="px-4 sm:px-5 md:px-6 pb-4 sm:pb-5 md:pb-6">
+              <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mb-3 sm:mb-4" />
+              <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
+                Yes. We provide full fledge projects in different domains.
               </p>
             </div>
           </details>
@@ -107,7 +131,7 @@ const FAQs = () => {
         {/* Call to Action */}
         <div className="text-center mt-12 sm:mt-14 md:mt-16 px-4">
           <p className="text-gray-600 mb-4 sm:mb-5 md:mb-6 text-base sm:text-lg">
-            Still have questions? **We&apos;re** here to help!
+            Still have questions? We&apos;re here to help!
           </p>
           <button className="group bg-gradient-to-r from-indigo-600 to-cyan-400 text-white px-6 sm:px-7 md:px-8 py-3 sm:py-3.5 md:py-4 rounded-full font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
             <span className="group-hover:animate-pulse">Contact Support</span>
