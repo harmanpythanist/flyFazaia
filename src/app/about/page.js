@@ -62,7 +62,7 @@ const StatsCard = ({ number, label, delay }) => (
               <h3 className="font-bold mb-4 flex items-center justify-center gap-2">
                 <span className="text-xl sm:text-2xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-cyan-600 mb-4 sm:mb-5 md:mb-6">Who We Are</span> 
               </h3>
-              <p className="text-sm sm:text-base md:text-lg font-light text-gray-700 mb-6 sm:mb-7 md:mb-8 px-2">
+              <p className="text-sm sm:text-base md:text-lg font-semibold text-gray-700 mb-6 sm:mb-7 md:mb-8 px-2">
                 We help individuals, startups, and businesses turn vision into reality through cutting-edge AI and data science solutions. Our strength lies in making complex technology accessible—delivering technical excellence while explaining even the most advanced concepts in simple, understandable terms.
               </p>
             </ListAnimation>
@@ -74,7 +74,7 @@ const StatsCard = ({ number, label, delay }) => (
               <h3 className="text-2xl font-bold mb-4 flex items-center justify-center">
                 <span className="text-xl sm:text-2xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-cyan-600 mb-4 sm:mb-5 md:mb-6">What Sets Us Apart</span> 
               </h3>
-              <p className="text-sm sm:text-base md:text-lg font-light text-gray-700 mb-6 sm:mb-7 md:mb-8 px-2">
+              <p className="text-sm sm:text-base md:text-lg font-semibold text-gray-700 mb-6 sm:mb-7 md:mb-8 px-2">
                 As instructors trusted by 6,000+ Udemy students and consultants with exceptional client loyalty, we've built our reputation on reliable solutions, clear communication, and results that genuinely work. Our clients value us for turning complexity into clarity.
               </p>
             </ListAnimation>
@@ -123,24 +123,24 @@ const StatsCard = ({ number, label, delay }) => (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6 font-light">
               <div className="space-y-2 sm:space-y-2.5 md:space-y-3">
                 <div className="flex items-start gap-3">
-                  <span className="text-sm sm:text-base md:text-lg text-gray-700"><p>End-to-end AI development and deployment</p></span>
+                  <span className="text-sm  font-semibold sm:text-base md:text-lg text-gray-600"><p>End-to-end AI development and deployment</p></span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="text-sm sm:text-base md:text-lg text-gray-700"><p>Expert-level data analysis and visualization</p></span>
+                  <span className="text-sm font-semibold  sm:text-base md:text-lg text-gray-600"><p>Expert-level data analysis and visualization</p></span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="text-sm sm:text-base md:text-lg text-gray-700"><p>Machine learning model development</p></span>
+                  <span className="text-sm font-semibold  sm:text-base md:text-lg text-gray-600"><p>Machine learning model development</p></span>
                 </div>
               </div>
               <div className="space-y-2 sm:space-y-2.5 md:space-y-3">
                 <div className="flex items-start gap-3">
-                  <span className="text-sm sm:text-base md:text-lg text-gray-700"><p>Research assistance and technical consulting</p></span>
+                  <span className="text-sm sm:text-base md:text-lg font-semibold  text-gray-600"><p>Research assistance and technical consulting</p></span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="text-sm sm:text-base md:text-lg text-gray-700"><p>Personalized training in Python and advanced AI</p></span>
+                  <span className="text-sm sm:text-base md:text-lg  font-semibold text-gray-600"><p>Personalized training in Python and advanced AI</p></span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="text-sm sm:text-base md:text-lg text-gray-700"><p>Custom solutions for your unique challenges</p></span>
+                  <span className="text-sm sm:text-base md:text-lg  font-semibold text-gray-600"><p>Custom solutions for your unique challenges</p></span>
                 </div>
               </div>
             </div>

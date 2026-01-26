@@ -7,7 +7,7 @@ const TechWritingPlate = ({children,i}) => {
             <div className="relative h-full max-w-full  sm:max-w-[80vw] md:max-w-[70vw] lg:max-w-[50vw] m-auto bg-white/10 backdrop-blur-xl rounded-xl sm:rounded-2xl border border-white/20 shadow-2xl overflow-hidden hover:shadow-indigo-500/25 transition-all duration-300 hover:scale-105">
               
               {/* Tech Circuit Pattern Overlay */}
-              <div className="absolute inset-0 opacity-70 pointer-events-none ">
+              <div className="absolute inset-0 opacity-50 pointer-events-none ">
                 <svg className="w-full h-full" viewBox="0 0 400 300">
                   <defs>
                     <pattern id={`circuit-${i}`} x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">

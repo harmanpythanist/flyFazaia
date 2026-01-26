@@ -83,7 +83,7 @@ import React from 'react';
           <h4 className="text-lg sm:text-xl md:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-cyan-600 mb-2 sm:mb-3">
             {title}
           </h4>
-          <p className="text-sm sm:text-base md:text-lg text-gray-700 font-light px-2">
+          <p className="text-sm sm:text-base md:text-xl text-gray-600 font-semibold px-2">
             {desc}
           </p>
         </div>
@@ -100,7 +100,7 @@ import React from 'react';
             <h4 className="text-lg sm:text-xl md:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-cyan-600 mb-2 sm:mb-3">
               {title}
             </h4>
-            <p className="text-sm sm:text-base md:text-lg text-gray-700 font-light">
+            <p className="text-sm sm:text-base md:text-xl text-gray-600 font-semibold">
               {content}
             </p>
           </div>
@@ -182,7 +182,7 @@ import React from 'react';
                 <h4 className="text-xl sm:text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-cyan-600 mb-4 sm:mb-5 md:mb-6 text-center">
                   Cookies & Tracking
                 </h4>
-                <p className="text-sm sm:text-base md:text-lg text-gray-700 font-light leading-relaxed">
+                <p className="text-sm sm:text-base  md:text-xl text-gray-600 font-semibold leading-relaxed">
                   We may use cookies and similar tracking technologies to improve your browsing experience and analyze site traffic. You can control cookie preferences through your browser settings. These technologies help us understand how you interact with our services and enable us to provide a better user experience.
                 </p>
               </ListAnimation>
@@ -195,7 +195,7 @@ import React from 'react';
                 <h4 className="text-xl sm:text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-cyan-600 mb-4 sm:mb-5 md:mb-6 text-center">
                   Third-Party Services
                 </h4>
-                <p className="text-sm sm:text-base md:text-lg text-gray-700 font-light leading-relaxed">
+                <p className="text-sm sm:text-base md:text-xl text-gray-600 font-semibold leading-relaxed">
                   Our website may contain links to third-party services. We are not responsible for the privacy practices of these external sites. We recommend reviewing their privacy policies before providing any personal information. Any data you share with third-party services is governed by their respective privacy policies.
                 </p>
               </ListAnimation>
@@ -208,7 +208,7 @@ import React from 'react';
                 <h4 className="text-xl sm:text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-cyan-600 mb-4 sm:mb-5 md:mb-6 text-center">
                   Policy Updates
                 </h4>
-                <p className="text-sm sm:text-base md:text-lg text-gray-700 font-light leading-relaxed">
+                <p className="text-sm sm:text-base md:text-xl text-gray-600 font-semibold leading-relaxed">
                   We may update these policies periodically to reflect changes in our practices or legal requirements. Significant changes will be communicated via email or through a notice on our website. Continued use of our services after policy updates constitutes acceptance of the revised terms.
                 </p>
               </ListAnimation>
@@ -222,7 +222,7 @@ import React from 'react';
                 <p className="text-xl sm:text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-cyan-600">
                   Questions About Our Policies?
                 </p>
-                <p className="text-sm sm:text-base md:text-lg text-gray-700 font-light">
+                <p className="text-sm sm:text-base md:text-xl text-gray-600 font-semibold">
                   We're committed to transparency and protecting your rights. If you have any questions or concerns about our policies or privacy practices, please don't hesitate to reach out to us.
                 </p>
                 <p className="text-base sm:text-lg md:text-xl text-gray-600 font-medium">

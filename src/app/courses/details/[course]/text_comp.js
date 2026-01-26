@@ -1,18 +1,19 @@
+import { Headings_appear } from '@/client_comps/list_animation';
 import Link from 'next/link';
 import React from 'react';
 
 const TextComp = ({data}) => {
 
     return (
-        <div className='relative w-full bg-gray-100 min-h-screen p-8 tech-grid-bg'>
+        <div className='relative w-full bg-transparent min-h-screen p-8 tech-grid-bg'>
             {/* Animated tech nodes */}
             <div className="absolute top-20 left-20 w-3 h-3 bg-cyan-500 rounded-full opacity-80 animate-pulse shadow-[0_0_15px_rgba(6,182,212,0.8)]"></div>
             <div className="absolute top-32 right-40 w-2 h-2 bg-indigo-500 rounded-full opacity-80 animate-pulse delay-150 shadow-[0_0_10px_rgba(99,102,241,0.8)]"></div>
             <div className="absolute bottom-40 left-32 w-3 h-3 bg-cyan-400 rounded-full opacity-80 animate-pulse delay-300 shadow-[0_0_15px_rgba(34,211,238,0.8)]"></div>
             <div className="absolute bottom-20 right-20 w-2 h-2 bg-indigo-600 rounded-full opacity-80 animate-pulse delay-75 shadow-[0_0_10px_rgba(79,70,229,0.8)]"></div>
-            
+            <Headings_appear title='Syllabus'/>
             {/* Main content container */}
-            <div className='relative z-10 max-w-6xl mx-auto'>
+            <div className='relative z-10 max-w-6xl mx-auto mt-24'>
            
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
                     {data?.map((section, i) => {

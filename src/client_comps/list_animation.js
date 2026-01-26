@@ -10,7 +10,7 @@ const {scrollYProgress}=useScroll({target:ref,offset:["start end","end start"]})
 const y=useTransform(scrollYProgress,[0,.5,1],[0,0,-100]);
 const opacity=useTransform(scrollYProgress,[0,.5,1],[1,1,0]);
 return <motion.div ref={ref} initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:.5,ease:"easeOut"}} viewport={{amount:.9}} className='relative h-full flex justify-center items-center px-4 sm:px-6 lg:px-8'>
-<motion.p  className='bg-gradient-to-r from-indigo-600 to-cyan-500 bg-clip-text text-transparent text-6xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-center' style={{
+<motion.p  className='bg-gradient-to-r from-indigo-600 to-cyan-500  bg-clip-text text-transparent text-6xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl min-h-[105px] font-black text-center' style={{
             y,opacity,
                 position:"relative",
               

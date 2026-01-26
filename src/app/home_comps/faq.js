@@ -2,7 +2,7 @@ import React from 'react';
 
 const FAQs = () => {
   return (
-    <section className="min-h-screen w-full relative overflow-hidden py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
+    <section className="min-h-screen w-full relative scrollbar-hidden overflow-hidden py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
       {/* Background Tech Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
