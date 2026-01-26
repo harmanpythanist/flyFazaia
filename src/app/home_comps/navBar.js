@@ -175,6 +175,12 @@ const sign_display = useMemo(() => {
             <span>{course.name}</span>
           </button>
         ))}
+ <div className="pt-4 mt-4 border-t border-gray-100">
+                    <div onClick={()=>{router.push("/courses")}} className="cursor-pointer flex items-center justify-center space-x-2 text-blue-600 hover:text-blue-700 font-semibold transition-colors duration-200">
+                      <BookOpen size={18} />
+                      <span>View All Courses</span>
+                    </div>
+                  </div>
       </div>
     </div>
 
