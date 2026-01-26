@@ -9,7 +9,7 @@ import { cacheLife } from 'next/cache';
 
 
 const Page = async() => {
-cacheLife("hours")
+cacheLife("days")
 
 
     return (

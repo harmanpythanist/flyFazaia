@@ -5,6 +5,7 @@ import { ErrorBoundary } from 'react-error-boundary';
 import ErrorFallback from '@/client_comps/Error_comp';
 import { cookies } from 'next/headers';
 import { fetch_fnx } from '@/server_fetch/fetch';
+import Link from 'next/link';
 
 
 const Page = async() => {

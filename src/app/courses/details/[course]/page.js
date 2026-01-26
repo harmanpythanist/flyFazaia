@@ -32,9 +32,12 @@ export default Page;
 
 const Page_fetch=async({params})=>{
 "use cache"
-cacheLife("hours");
+cacheLife("days");
 try {
 let {course}=await params;
+if(!["122d7685-d9ba-4fd9-86ff-80b36cfb5b03"].includes(course)){
+  let err=new Error();err.message='Data not found';throw err;
+}
   let get=await fetch_fnx("syllabus",decodeURIComponent(course));
 console.log(get);
 
@@ -50,7 +53,8 @@ console.log(get);
           <TextComp data={get.data}/>
         </div>
     );
-} catch (error) {
+} catch (error) {console.log("here in details courses =",error.message);
+
   return <div className='text-6xl mt-44 text-indigo-500 font-black flex flex-col items-center justify-center'> <div className='mt-44'>   <div className='h-[50px] w-[100px] absolute top-28 sm:top-24 left-4 sm:left-8 md:left-12 z-60'> 
         <Link
           href={'/'}
@@ -59,7 +63,7 @@ console.log(get);
           Back
         </Link>
       </div> 
-                </div> <p>We Are Sorry</p><p className='text-2xl text-gray-600'>{error.message=='Data Not Found'?"Syllabus For This Course Are Yet To Be Added":"Something Went Wrong"}</p></div>
+                </div> <p>We Are Sorry</p><p className='text-2xl text-gray-600'>{error.message=='Data not found'?"Syllabus For This Course Is Yet To Be Added":"Something Went Wrong"}</p></div>
 };
 
 
