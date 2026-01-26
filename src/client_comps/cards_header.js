@@ -1,6 +1,7 @@
 "use client"
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import Link from 'next/link';
 
 const CardsHeader = React.memo(({data=[{}]}) => {
 
@@ -74,9 +75,9 @@ const trans_x=useTransform(scroll,[0,1],[`translateX(-${ind*25}vw) `,`translateX
           {x.text.split(",").map((y,i)=><li key={i} className="font-medium">{y}</li>)}
         </ul>
         
-        <button className="mt-auto mx-auto px-5 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-indigo-600 to-cyan-400 text-white font-bold text-base sm:text-lg rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+        <Link href={'/services'} className="cursor-pointer mt-auto mx-auto px-5 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-indigo-600 to-cyan-400 text-white font-bold text-base sm:text-lg rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
           View More
-        </button>
+        </Link>
       </div>
     </motion.div>
     );

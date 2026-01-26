@@ -45,7 +45,7 @@ const SignUp = () => {
 
       // ✅ Trim all origins before comparing
       const allowedOrigins = [
-        "http://localhost:4600",
+        "http://localhost:3000",
         url?.trim(),
         process.env.NEXT_PUBLIC_URL?.trim()
       ].filter(Boolean);

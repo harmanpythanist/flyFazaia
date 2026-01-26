@@ -48,7 +48,7 @@ export default function Home() {
       </main>
 
       {/* Services Section - binary code pattern */}
-      <section className="text-center relative mt-24">
+      <section className="text-center relative ">
       
         
         <div className="relative z-10">

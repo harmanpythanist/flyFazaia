@@ -4,6 +4,7 @@ import { cookies } from 'next/headers';
 import CryptoJS from 'crypto-js'
 import { ErrorBoundary } from 'react-error-boundary';
 import ErrorFallback from '@/client_comps/Error_comp';
+import Link from 'next/link';
 const Page = async() => {
 
 return(
@@ -46,7 +47,14 @@ if(new Date(decrypt.expiry) >new Date()){
 }else {throw new Error("User Session expired,Login Again")}
 
 }else{throw new Error("User Not Authorized")}
-} catch (error) {return <div className='text-6xl mt-66 w-[100vw] text-indigo-500 h-[50vh] font-black flex flex-col items-center justify-center'><p>{error.message}</p></div>
+} catch (error) {return <div className='text-6xl mt-66 w-[100vw] text-indigo-500 h-[50vh] font-black flex flex-col items-center justify-center'>  <div className='h-[50px] w-[100px] absolute top-28 sm:top-24 left-4 sm:left-8 md:left-12 z-60'> 
+        <Link
+          href={'/'}
+          className="w-20 sm:w-24 h-[36px] sm:h-[40px] text-base sm:text-lg hover:scale-105 cursor-pointer transition-transform duration-300 text-white bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center"
+        >
+          Back
+        </Link>
+      </div> <p>{error.message}</p></div>
     return 
 }
 }

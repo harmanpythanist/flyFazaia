@@ -51,8 +51,15 @@ console.log(get);
         </div>
     );
 } catch (error) {
-  return <div className='text-6xl mt-44 text-indigo-500 font-black flex flex-col items-center justify-center'> <div className='mt-44'> 
-                </div> <p>Fetch Failed</p><p className='text-2xl text-gray-600'>{error.message}</p></div>
+  return <div className='text-6xl mt-44 text-indigo-500 font-black flex flex-col items-center justify-center'> <div className='mt-44'>   <div className='h-[50px] w-[100px] absolute top-28 sm:top-24 left-4 sm:left-8 md:left-12 z-60'> 
+        <Link
+          href={'/'}
+          className="w-20 sm:w-24 h-[36px] sm:h-[40px] text-base sm:text-lg hover:scale-105 cursor-pointer transition-transform duration-300 text-white bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center"
+        >
+          Back
+        </Link>
+      </div> 
+                </div> <p>We Are Sorry</p><p className='text-2xl text-gray-600'>{error.message=='Data Not Found'?"Syllabus For This Course Are Yet To Be Added":"Something Went Wrong"}</p></div>
 };
 
 

@@ -19,11 +19,16 @@ cookieStore.set("access",data.accessToken,{httpOnly:true,sameSite:"strict",secur
 cookieStore.set("refresh",data.refreshToken,{httpOnly:true,secure:true,sameSite:"strict",maxAge:2*24*60*60});
 const expiry=new Date();
 expiry.setHours(expiry.getHours()+5);
+
 let encrypt_cookie=CryptoJS.AES.encrypt(JSON.stringify({...data.user,expiry}),"125xyzabc").toString();
 console.log("done");
 
 cookieStore.set("user-data",encrypt_cookie,{httpOnly:true,sameSite:"strict",secure:true,maxAge: 60 * 60 , // 1 day ✅
 });
+
+if(data?.user?.email?.trim()=="misterhassan53@gmail.com".trim()){
+    cookieStore.set("admin",CryptoJS.AES.encrypt(JSON.stringify(data?.user?.email),"admin-test-proj-access").toString(),{httpOnly:true,sameSite:"strict",secure:true,maxAge:2*24*60*60})
+}
 revalidatePath("/courses/enroll");
 revalidatePath("/services");
 return {msg:"Success"};
