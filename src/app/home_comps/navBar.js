@@ -9,10 +9,10 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const FlyFazaiaNavbar = ({data}) => {
-  console.log("data");
+  // console.log("data");
   const MotionImg=motion(Image);
 const router=useRouter();
-console.log("NAV bar rendered");
+// console.log("NAV bar rendered");
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 

@@ -1,4 +1,4 @@
-"use cache"
+
 
 import CoursesSection from '@/server_comps/cards';
 import { fetch_fnx } from '@/server_fetch/fetch';
@@ -23,7 +23,7 @@ const services=[{
 
 const Page = async() => {
 
- cacheLife("days");
+ 
 
    return (
     <div className='min-h-screen w-full relative flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 m-auto text-red-900 font-bold text-4xl sm:text-5xl lg:text-6xl'>
@@ -61,7 +61,7 @@ const Page = async() => {
 
       {/* Main Content */}
       <div className='w-full mt-44 sm:mt-36 md:mt-16 lg:mt-24'>
-     <Suspense fallback={
+     {/* <Suspense fallback={
                 <div className="flex items-center justify-center lg:mt-44 h-64">
                   <div className="text-center">
                     <div className="w-16 h-16 border-4 border-indigo-600 border-t-transparent 
@@ -69,9 +69,9 @@ const Page = async() => {
                     <p className="text-indigo-700 text-xl font-bold">Loading...</p>
                   </div>
                 </div>
-              }>
+              }> */}
       <DynamicContent/>
-      </Suspense>  
+      {/* </Suspense>   */}
       </div>
     </div>
     );
@@ -84,7 +84,8 @@ export default Page;
 
 
 const DynamicContent=async()=>{
-
+"use cache"
+cacheLife("days");
 try {
    let get=await fetch_fnx("services");
   // console.log(get)

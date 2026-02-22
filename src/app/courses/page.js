@@ -1,4 +1,4 @@
-  "use cache"
+
 
 
 import React, { Suspense } from 'react';
@@ -9,8 +9,9 @@ import { cacheLife } from 'next/cache';
 
 
 const Page = async() => {
-cacheLife("days")
 
+
+console.log("im running");
 
     return (
         <div className='h-full relative flex flex-col items-center justify-center w-[100vw] text-6xl text-white'>
@@ -45,7 +46,7 @@ cacheLife("days")
         </Link>
       </div> 
   <div className='w-full mt-44 sm:mt-36 md:mt-16 lg:mt-24'>
-<Suspense fallback={
+{/* <Suspense fallback={
                 <div className="flex items-center justify-center lg:mt-44 h-64">
                   <div className="text-center">
                     <div className="w-16 h-16 border-4 border-indigo-600 border-t-transparent 
@@ -53,11 +54,11 @@ cacheLife("days")
                     <p className="text-indigo-700 text-xl font-bold">Loading...</p>
                   </div>
                 </div>
-              }>
+              }> */}
    
         <DynamicContent/>
 
-</Suspense>
+{/* </Suspense> */}
 
       </div>
             
@@ -70,7 +71,8 @@ export default Page;
 
 
 const DynamicContent=async()=>{
-
+  "use cache"
+  cacheLife("days")
 try {
    let get=await fetch_fnx("courses");
   console.log(get)

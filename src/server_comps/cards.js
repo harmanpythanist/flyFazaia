@@ -8,7 +8,7 @@ import { cacheLife } from 'next/cache';
 
 const CoursesSection = async({ data,type }) => {
   // cacheLife("hours")
-  console.log(data);
+  // console.log(data);
   
 
 
